@@ -17,7 +17,7 @@ var hintPipesStr = "ab中国人|->|cd困了、累了、喝红牛 #ads #biz-pitch
   "偏序图渲染服务|->|以图答问微信号 #partial-order #hintsnet-meta #biz-pitch \n" +
   "引思网已部署完毕|->|讨论共识可作为项目完成度的单元测试工具 #partial-order #hintsnet-meta #biz-pitch \n";
 
-var hintPipesJSONArray = hintPipesStr2JSON(hintPipesStr);
+var hintPipesJSONArray = hintPipesStr2JSONArray(hintPipesStr);
 console.log(hintPipesJSONArray);
 
 var dotEdgesStr = hintPipesJSONArray2DotEdgesStr(hintPipesJSONArray);
