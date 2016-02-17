@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>QUnit basic example</title>
+  <link rel="stylesheet" href="//code.jquery.com/qunit/qunit-1.21.0.css">
+</head>
+
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="//code.jquery.com/qunit/qunit-1.21.0.js"></script>
+  <script src="lib.js"></script>
+  <script>
+  QUnit.test("hintPipeStr2Obj：把形如“a|->|b #keyword @people”格式的字符串转换为 JS 对象",
+    function(assert) {
+      var actObj = hintPipeStr2Obj("a|->|b");
+      var expectObj = {
+        "inPort": "a",
+        "outPort": "b"
+      }
+      assert.equal(actObj.inPort, expectObj.inPort, "入口应该为 a");
+      assert.equal(actObj.outPort, expectObj.outPort, "出口应该为 b");
+    });
+  </script>
+</body>
+
+</html>
