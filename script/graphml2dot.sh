@@ -1,0 +1,13 @@
+#!/bin/sh
+
+GRAPHML_INPUT=${1};
+DOT_OUTPUT=${2};
+#GRAPHML_GML_OUTPUT_UTF8="${2}.utf8";
+#GRAPHML_GML_OUTPUT_GBK="${2}";
+
+graphml2dot.pl ${GRAPHML_INPUT} > ${DOT_OUTPUT};
+#sed 's/ name/ label/' ${GML_OUTPUT} > ${GRAPHML_GML_OUTPUT_UTF8};
+#iconv -futf8 -tgbk ${GRAPHML_GML_OUTPUT_UTF8} > ${GRAPHML_GML_OUTPUT_GBK}
+
+#rm -f ${GML_OUTPUT};
+#rm -f ${GRAPHML_GML_OUTPUT_UTF8};
