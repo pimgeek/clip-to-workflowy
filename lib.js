@@ -1,9 +1,9 @@
 // hintsnet 引思网专用库函数
 
 // 定义 CJK 字符相关正则表达式
-var regExpEn = "[a-zA-Z0-9]";
+var regExpEn = "[a-zA-Z0-9-]";
 var regExpCJKIdeographs = "[㐀-\u4dbe一-\u9ffe]|[\ud840-\ud868\ud86a-\ud86c][\udc00-\udfff]|\ud869[\udc00-\udede\udf00-\udfff]|\ud86d[\udc00-\udf3e\udf40-\udfff]|\ud86e[\udc00-\udc1e]|[\ufa0e\ufa0f\ufa11\ufa13\ufa14\ufa1f\ufa21\ufa23\ufa24\ufa27-\ufa29]";
-var regExpCJKSymbols = "[\u3000-〾（）]";
+var regExpCJKSymbols = "[\u3000-〾（）？，、]";
 
 function hintPipeIsEqual(hintPipeA, hintPipeB) {
   if (hintPipeA["inPort"] === hintPipeB["inPort"] &&
@@ -78,8 +78,8 @@ function dotEdges2Digraph(dotEdges, graphDir) {
   return 'digraph {\n' +
     '  rankdir=' + graphDir + '\n' +
     '  graph [fontname="simhei" splines="polyline"]\n' +
-    '  edge  [fontname="simhei"]\n' +
-    '  node  [fontname="simhei" shape="box"]\n' +
+    '  edge  [fontname="simhei" arrowsize="0.6"]\n' +
+    '  node  [fontname="simhei" fontsize="9px" shape="note" height="0.1" style="filled" fillcolor="khaki1"]\n' +
     dotEdges +
     "}\n"
 }
