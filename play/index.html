@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="ui.css" />
+  <script src="http://cdn.staticfile.org/rxjs/4.0.7/rx.js"></script>
+  <script src="http://cdn.staticfile.org/rxjs/4.0.7/rx.async.js"></script>
+  <script src="http://cdn.staticfile.org/rxjs/4.0.7/rx.coincidence.js"></script>
+  <script src="http://cdn.staticfile.org/rxjs/4.0.7/rx.binding.js"></script>
+  <script src="http://cdn.staticfile.org/rxjs/4.0.7/rx.time.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="input-pane">
+      <textarea id="input"></textarea>
+    </div>
+    <div class="output-pane">
+      <textarea id="output"></textarea>
+    </div>
+    <div class="spacer"></div>
+    <div class="pipe-pane">&nbsp;</div>
+    <div class="proc-pane">
+      <button onclick="loadProcessor(hintPipes2DigraphLR);">引思管道&gt;横向DOT</button>&nbsp;
+      <button onclick="loadProcessor(hintPipes2DigraphTB);">引思管道&gt;纵向DOT</button>&nbsp;
+      <!--       
+      <button onclick="loadProcessor(digraph2HintPipes);">DOT&gt;引思管道</button>&nbsp;
+      <button onclick="loadProcessor(dotCodeTidy);">DOT-Tidy</button>&nbsp;
+      <button onclick="loadProcessor(dotCodeLayer1Unwrap);">DOT-去外壳</button>&nbsp;
+      <button onclick="loadProcessor(dotCodeParseGlobalConfig);">DOT-解析全局设置</button>&nbsp; 
+      -->
+    </div>
+  </div>
+  <center><a href="/hintsnet/qunit-test.html">QUnit 自动化测试</a></center>
+  <script type="text/javascript" src="/hintsnet/util.js"></script>
+  <script type="text/javascript" src="/hintsnet/lib.js"></script>
+  <script type="text/javascript" src="/hintsnet/main.js"></script>
+</body>
+
+</html>

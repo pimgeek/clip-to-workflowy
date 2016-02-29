@@ -85,14 +85,14 @@ function dotEdges2Digraph(dotEdges, graphDir) {
 }
 
 // 把引思管道序列转换为横向 digraph
-function dotEdges2DigraphLR(hintPipeText) {
+function hintPipes2DigraphLR(hintPipeText) {
   var dotEdges = hintPipeText2DotEdges(hintPipeText);
   var digraphLR = dotEdges2Digraph(dotEdges, 'LR');
   return digraphLR;
 }
 
 // 把引思管道序列转换为纵向 digraph
-function dotEdges2DigraphTB(hintPipeText) {
+function hintPipes2DigraphTB(hintPipeText) {
   var dotEdges = hintPipeText2DotEdges(hintPipeText);
   var digraphTB = dotEdges2Digraph(dotEdges, 'TB');
   return digraphTB;
