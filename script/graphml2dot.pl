@@ -38,9 +38,9 @@ my %shape_map =
    ellipse        => 'ellipse',
    hexagon        => 'hexagon',
    note           => 'note',
-   rectangle      => 'box',
-   roundrectangle => 'box',
-   RECTANGLE      => 'box',
+   rectangle      => 'note',
+   roundrectangle => 'note',
+   RECTANGLE      => 'note',
    ELLIPSE        => 'ellipse',
    HEXAGON        => 'hexagon',
    DIAMOND        => 'diamond',
@@ -134,7 +134,7 @@ print "digraph G {\n";
 print "  rankdir=LR;\n";
 print "  graph [fontname=\"simhei\" splines=\"polyline\"]\n";
 print "  edge  [fontname=\"simhei\"]\n";
-print "  node  [fontname=\"simhei\" shape=\"box\" width=\"1.68\" height=\"0.1\"]\n";
+print "  node  [fontname=\"simhei\" shape=\"note\" width=\"1.68\" height=\"0.1\"]\n";
 
 $twig->parsefile($ARGV[0]);
 print "}\n";
@@ -287,10 +287,10 @@ sub print_node
 {
   $oldid_to_newid{$cur_node->{__oldid}} = $cur_node->{id};
   print "  ";
-	print "\"$cur_node->{id}\"\n";
-  #print ' [';
-  #print join(', ', map("$_=$cur_node->{$_}", grep {!/^__/} keys %$cur_node));
-  #print "]\n";
+	print "\"$cur_node->{id}\"";
+  print ' [';
+  print join(' ', map("$_=$cur_node->{$_}", grep {/^(shape|style|fillcolor)/} keys %$cur_node));
+  print "]\n";
 }
 
 
