@@ -37,6 +37,7 @@ my %shape_map =
    diamond        => 'diamond',
    ellipse        => 'ellipse',
    hexagon        => 'hexagon',
+   note           => 'note',
    rectangle      => 'box',
    roundrectangle => 'box',
    RECTANGLE      => 'box',
@@ -59,6 +60,7 @@ my %y_arrow_type_map =
     'none'        => 'none',
     'standard'    => 'normal',
     't_shape'     => 'tee',
+    'short'       => 'open',
   );
 
 # I think these come from the constants in giny.view.EdgeView, namely the EDGE_COLOR_* ones.
@@ -285,7 +287,7 @@ sub print_node
 {
   $oldid_to_newid{$cur_node->{__oldid}} = $cur_node->{id};
   print "  ";
-	print "\"$cur_node->{id}\"";
+	print "\"$cur_node->{id}\"\n";
   #print ' [';
   #print join(', ', map("$_=$cur_node->{$_}", grep {!/^__/} keys %$cur_node));
   #print "]\n";
