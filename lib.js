@@ -3,7 +3,7 @@
 // 定义 CJK 字符相关正则表达式
 var regExpEn = "[a-zA-Z0-9-]";
 var regExpCJKIdeographs = "[㐀-\u4dbe一-\u9ffe]|[\ud840-\ud868\ud86a-\ud86c][\udc00-\udfff]|\ud869[\udc00-\udede\udf00-\udfff]|\ud86d[\udc00-\udf3e\udf40-\udfff]|\ud86e[\udc00-\udc1e]|[\ufa0e\ufa0f\ufa11\ufa13\ufa14\ufa1f\ufa21\ufa23\ufa24\ufa27-\ufa29]";
-var regExpCJKSymbols = "[\u3000-〾（）？，、]";
+var regExpCJKSymbols = "[\u3000-〾？，、“”‘’（）《》—·]";
 
 function hintPipeIsEqual(hintPipeA, hintPipeB) {
   if (hintPipeA["inPort"] === hintPipeB["inPort"] &&
@@ -75,7 +75,7 @@ function hintPipeText2DotEdges(hintPipeText) {
 
 // 为 Dot 语法描述字符串加上 digraph 的外包裹
 function dotEdges2Digraph(dotEdges, graphDir) {
-  return 'digraph {\n' +
+  return 'digraph G {\n' +
     '  rankdir=' + graphDir + '\n' +
     '  graph [fontname="simhei" splines="polyline"]\n' +
     '  edge  [fontname="simhei" arrowsize="0.6"]\n' +
@@ -94,6 +94,6 @@ function hintPipes2DigraphLR(hintPipeText) {
 // 把引思管道序列转换为纵向 digraph
 function hintPipes2DigraphTB(hintPipeText) {
   var dotEdges = hintPipeText2DotEdges(hintPipeText);
-  var digraphTB = dotEdges2Digraph(dotEdges, 'TB');
+  var digraphTB = dotEdges2Digraph(dotEdges, 'BT');
   return digraphTB;
 }
