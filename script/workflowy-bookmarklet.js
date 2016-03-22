@@ -13,7 +13,7 @@ javascript: (function() {
   var isChrome = !!window.chrome;
 
   if (isWorkFlowy !== -1) {
-    var docTitle = '&lt;i&gt;See: &quot;' +
+    var docTitle = '&lt;i&gt;参见&quot;' +
       docTitle.replace(/ - WorkFlowy$/, '') +
       '&quot;&lt;/i&gt;';
   }
@@ -41,7 +41,7 @@ javascript: (function() {
       encodeURIComponent(clip) +
       '');
   } else {
-    var userInput = prompt('1\) COPY the text below. (Ctrl C\) or \(Cmd C\)\n\n2\) OK = Launch WorkFlowy Home.\n    CANCEL = Go to WorkFlowy manually.\n\n3\) PASTE into a new WorkFlowy docTitle.   \(v2.4\)\n', clip);
+    var userInput = prompt('  请复制下列文字 \(Ctrl + C\) 或 \(Cmd + C\) \n\n  并打开 Workflowy 页签粘贴为新的笔记条目\n', clip);
     if (userInput !== null) {
       if (isWorkFlowy !== -1) { location.href = inbox; } else { ; }
     } else {
