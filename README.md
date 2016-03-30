@@ -7,9 +7,11 @@
 ```
 ./js/      -  原始 JS 代码
 ./dist/   -  利用工具转换为浏览器 Bookmarklet 之后的代码（ 转换工具 http://chriszarate.github.io/bookmarkleter/ ）
-
 ```
+
+转换工具 - http://chriszarate.github.io/bookmarkleter/ 
 
 ## 安装 Bookmarklet 的方法
 
-TBD
+http://pimgeek.coding.me/clip-to-workflowy/
+
