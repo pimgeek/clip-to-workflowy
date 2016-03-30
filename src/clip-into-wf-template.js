@@ -23,16 +23,15 @@ javascript: (function() {
   var clip = '<?xml version="1.0"?>' +
     '<opml version="2.0">' +
     '  <head>' +
-    '    <ownerEmail>wudibiz@163.com</ownerEmail>' +
+    '    <ownerEmail>username@workflowy.com</ownerEmail>' +
     '  </head>' +
     '  <body>' + 
-    '    <outline text="|-&amp;gt;| #hint-pipe #to-refine " >' +
-    '      <outline text="关键问题" >' +
-    '        <outline text="' + docSelectionHeader + '" _note="' + docSelection + '" /></outline>' +
-    '      <outline text="问题来源" >' +
-    '        <outline text="描述一下问题的来龙去脉" /></outline>' +
-    '      <outline text="相关资源" >' +
+    '    <outline text="' + docSelectionHeader + '" >' +
+    '      <outline text="关注的重点" _note="' + docSelection + '" />' +
+    '      <outline text="关注的理由" _note="我为何会收藏这个网址？" />' +
+    '      <outline text="传送门" >' +
     '        <outline text="' + docTitle + '" _note="' + docUrl +'" /></outline>' +
+    '    </outline>' +
     '  </body>' +
     '</opml>';
 
