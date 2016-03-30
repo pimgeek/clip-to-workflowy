@@ -9,6 +9,8 @@ javascript: (function() {
   var docTitle = eopml(document.title);
   var docUrl = eopml(location.href) + ' ';
   var docSelection = eopml(window.getSelection().toString());
+  var docSelectionSplitIdx = docSelection.search(/[.;:?!。；：？！\r\n]/);
+  var docSelectionHeader = docSelection.substring(0, docSelectionSplitIdx + 1);
   var isWorkFlowy = location.href.indexOf('workflowy.com/#');
   var isChrome = !!window.chrome;
 
@@ -26,7 +28,7 @@ javascript: (function() {
     '  <body>' + 
     '    <outline text="|-&amp;gt;| #hint-pipe #to-refine " >' +
     '      <outline text="关键问题" >' +
-    '        <outline text="' + docSelection + '" /></outline>' +
+    '        <outline text="' + docSelectionHeader + '" _note="' + docSelection + '" /></outline>' +
     '      <outline text="问题来源" >' +
     '        <outline text="描述一下问题的来龙去脉" /></outline>' +
     '      <outline text="相关资源" >' +
