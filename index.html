@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Coompatible" content="chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
   <title>Clip To Workflowy：使用说明</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
   <!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.js"></script>
     <![endif]-->
@@ -25,7 +25,7 @@
   }
 
   function getJSCode() {
-    loadXMLDoc("dist/clip-to-wf-template-export.js", function() {
+    loadXMLDoc("./dist/clip-to-wf-template-export.js", function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         document.getElementById("bookmarklet").href = xmlhttp.responseText;
       }
