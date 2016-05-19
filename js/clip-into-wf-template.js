@@ -9,7 +9,7 @@ javascript: (function() {
   var docTitle = eopml(document.title);
   var docUrl = eopml(location.href) + ' ';
   var docSelection = eopml(window.getSelection().toString());
-  var docSelectionSplitIdx = docSelection.search(/[.;:?!。；：？！\r\n]/);
+  var docSelectionSplitIdx = docSelection.search(/[?!。？！\r\n]/);
   var docSelectionHeader = docSelection.substring(0, docSelectionSplitIdx + 1);
   var isWorkFlowy = location.href.indexOf('workflowy.com/#');
   var isChrome = !!window.chrome;
@@ -23,14 +23,12 @@ javascript: (function() {
   var clip = '<?xml version="1.0"?>' +
     '<opml version="2.0">' +
     '  <head>' +
-    '    <ownerEmail>username@workflowy.com</ownerEmail>' +
+    '    <ownerEmail>anonymous@hintsnet.com</ownerEmail>' +
     '  </head>' +
     '  <body>' + 
-    '    <outline text="' + docSelectionHeader + '" >' +
-    '      <outline text="关注的重点" _note="' + docSelection + '" />' +
-    '      <outline text="关注的理由" _note="我为何会收藏这个网址？" />' +
-    '      <outline text="传送门" >' +
-    '        <outline text="' + docTitle + '" _note="' + docUrl +'" /></outline>' +
+    '    <outline text="|->| #hint-pipe #to-refine " >' +
+    '      <outline text="' + docSelectionHeader + '" _note="' + docSelection + '" />' +
+    '      <outline text="' + docTitle + '" _note="' + docUrl +'" /></outline>' +
     '    </outline>' +
     '  </body>' +
     '</opml>';
