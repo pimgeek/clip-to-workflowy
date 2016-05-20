@@ -9,8 +9,9 @@ javascript: (function() {
   var docTitle = eopml(document.title);
   var docUrl = eopml(location.href) + ' ';
   var docSelection = eopml(window.getSelection().toString());
-  var docSelectionSplitIdx = docSelection.search(/[?!。？！\r\n]/);
-  var docSelectionHeader = docSelection.substring(0, docSelectionSplitIdx + 1);
+  console.log(docSelection);
+  var docSelectionSplitIdx = docSelection.search(/([?!。？！]|&#10;)/);
+  var docSelectionHeader = docSelection.substring(0, docSelectionSplitIdx);
   var isWorkFlowy = location.href.indexOf('workflowy.com/#');
   var isChrome = !!window.chrome;
 
