@@ -25,7 +25,7 @@
   }
 
   function getJSCode() {
-    loadXMLDoc("./dist/clip-to-wf-template-export.js", function() {
+    loadXMLDoc("https://github.com/pimgeek/clip-to-workflowy/dist/clip-to-wf-template-export.js", function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         document.getElementById("bookmarklet").href = xmlhttp.responseText;
       }
@@ -40,9 +40,9 @@
       <div id="profile-img-frame"><img id="profile-img" alt="站务头像" src="img/site-admin.jpg" /></div>
       <div id="site-banner">
         <h1>Clip To Workflowy：使用说明</h1>
-        <p class="view"><a href="https://coding.net/u/pimgeek/p/clip-to-workflowy">项目源码 <strong>Coding.net</strong></a></p>
+        <p class="view"><a href="https://github.com/pimgeek/clip-to-workflowy/">项目源码 <strong>GitHub</strong></a></p>
         <ul>
-          <li class="single"><a href="https://coding.net/u/pimgeek/p/clip-to-workflowy">项目源码 <strong>Coding.net</strong></a></li>
+          <li class="single"><a href="https://github.com/pimgeek/clip-to-workflowy/">项目源码 <strong>GitHub</strong></a></li>
         </ul>
       </div>
     </header>
