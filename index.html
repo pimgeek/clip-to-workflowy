@@ -25,7 +25,7 @@
   }
 
   function getJSCode() {
-    loadXMLDoc("https://github.com/pimgeek/clip-to-workflowy/dist/clip-to-wf-template-export.js", function() {
+    loadXMLDoc("https://pimgeek.github.io/clip-to-workflowy/dist/clip-to-wf-template-export.js", function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
         document.getElementById("bookmarklet").href = xmlhttp.responseText;
       }
